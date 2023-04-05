@@ -58,3 +58,10 @@ task tests_lombok (type: Test) {
     }
     systemProperties(System.getProperties())
 }
+
+task tests_groovy (type: Test) {
+    useJUnitPlatform {
+        includeTags("GroovyTests")
+    }
+    systemProperties(System.getProperties())
+}
