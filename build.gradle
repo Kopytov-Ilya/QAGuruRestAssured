@@ -51,3 +51,10 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
+
+task tests_lombok (type: Test) {
+    useJUnitPlatform {
+        includeTags("LombokTests")
+    }
+    systemProperties(System.getProperties())
+}

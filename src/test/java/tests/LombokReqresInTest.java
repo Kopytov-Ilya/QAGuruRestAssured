@@ -23,7 +23,10 @@ import model.LoginErrorResponse;
 import model.UpdateUserResponse;
 import model.UserBody;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+@Tag("LombokTests")
 
     public class LombokReqresInTest {
 
