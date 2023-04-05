@@ -1,3 +1,5 @@
+package tests;
+
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.*;
 import static io.restassured.http.ContentType.JSON;
@@ -69,7 +71,6 @@ public class ReqresTests {
                 .statusCode(204);
     }
 
-
     @Test
     @DisplayName("Unsuccessful login")
     void loginUnsuccessful() {
@@ -87,7 +88,6 @@ public class ReqresTests {
                 .log().body()
                 .statusCode(400)
                 .body("error", is("Missing password"));
-
     }
 }
 
