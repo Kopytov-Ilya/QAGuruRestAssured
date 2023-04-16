@@ -2,7 +2,7 @@
 
 <br>
 <p align="center">
-<img width="60%" title="Reqres" src="images/logo/Reqres.png">
+<img width="60%" title="Reqres" src="images/logo/ReqresLogo.png">
 </p>
 <br>
 
