@@ -2,7 +2,7 @@
 
 <br>
 <p align="center">
-<img width="60%" title="Tinkoff" src="images/logo/Tinkoff.png">
+<img width="60%" title="Reqres" src="images/logo/Reqres.png">
 </p>
 <br>
 
