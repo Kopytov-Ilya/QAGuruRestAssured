@@ -1,4 +1,4 @@
-<h1 >Проект автоматизации UI для сайта <a href="https://www.tinkoff.ru ">tinkoff.ru</a></h1>
+<h1 >Проект автоматизации UI для сайта <a href="https://reqres.in">reqres.in</a></h1>
 
 <br>
 <p align="center">
@@ -14,9 +14,7 @@
 * <a href="#jenkins">Запуск тестов в Jenkins</a>
 * <a href="#allure">Отчеты в Allure</a>
 * <a href="#testops">Интеграция с Allure TestOps</a>
-* <a href="#testops">Интеграция с Jira</a>
 * <a href="#telegram">Уведомления в Telegram с использованием бота</a>
-* <a href="#video">Пример прогона теста в Selenoid</a>
 
 <a id="tools"></a>
 ## Технологии и инструменты
@@ -32,38 +30,33 @@
 <img width="6%" title="GitHub" src="images/logo/GitHub.png">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.png">
 <img width="6%" title="Allure TestOps" src="images/logo/AllureTestOps.svg">
-<img width="6%" title="JIRA" src="images/logo/JIRA.svg">  
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">  
+<img width="6%" title="RestAssured" src="images/logo/RestAssured.svg"> 
+<img width="6%" title="Groovy" src="images/logo/Groovy.png">   
+<img width="6%" title="Lombok" src="images/logo/Lombok.png">   
 </p>
 
 Автотесты написаны на <code>Java</code> с использованием <code>JUnit 5</code> и <code>Gradle</code>.
-Для UI-тестов использован фреймворк [Selenide](https://selenide.org/).
-Запуск тестов можно осуществлять локально или с помощью [Selenoid](https://aerokube.com/selenoid/).
+Для API-тестов использована библиотека [RestAssured](https://rest-assured.io), [Lombok](https://projectlombok.org). ООП [Groovy](https://groovy-lang.org).
+
 Также реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой уведомления с результатами в <code>Telegram</code> после завершения прогона.
 
 Allure-отчет включает в себя:
-* шаги выполнения тестов;
-* скриншот страницы в браузере в момент окончания автотеста;
-* Page Source;
-* логи браузерной консоли;
-* видео выполнения автотеста.
+* выполнения тестов;
+* api запросы;
 
 <a id="cases"></a>
 ## Реализованные проверки
 
 ### Автоматизированные проверки
-- [ ] Корректное отображение навигационного меню для RU локали
-- [ ] Корректное отображение навигационного меню для EN локали
-- [ ] Проверка калькулятора вклада
-- [ ] Проверка рекомендации SIM карты от Тинькофф 
-- [ ] Проверка рекомендации вкладов
-- [ ] Проверка рекомендации инвестиций
-- [ ] Проверка рекомендации кредитной карты
-- [ ] Проверка рекомендации ОСАГО
-- [ ] Заполнение формы отклика на вакансию
-
-### Мануальные проверки
-- [ ] Проверка наличия особых условий для пользователей с подпиской Pro
+- [ ] User created successfully
+- [ ] Resource not found
+- [ ] Successful login and get token
+- [ ] Delete user
+- [ ] Unsuccessful login
+- [ ] Checking the name and position when creating a user
+- [ ] Checking the number of all users
+- [ ] Editing the user's place of work
 
 <a id="console"></a>
 ##  Запуск тестов из терминала
@@ -77,20 +70,11 @@ gradle clean run_tests
 
 ```
 clean
-${TASK}
--Dbrowser=${BROWSER}
--Dversion=${VERSION}
--Dresolution=${RESOLUTION}
--Dremote=${REMOTE}
+test
+tests_lombok
+tests_groovy
 ```
 
-> `${BROWSER}` - наименование браузера (_по умолчанию - <code>chrome</code>_).
-> 
-> `${VERSION}` - номер версии браузера (_по умолчанию - <code>100.0</code>_).
-> 
-> `${RESOLUTION}` - размер окна браузера (_по умолчанию - <code>1920x1080</code>_).
->
-> `${REMOTE}` - адрес удаленного сервера, на котором будут запускаться тесты.
 
 <a id="jenkins"></a>
 ## Запуск тестов в Jenkins
@@ -124,20 +108,9 @@ ${TASK}
 <img src="images/screenshots/AllureTestCases.png">
 </p>
 
-### Пример мануального тест-кейса
-<p align="center">
-<img src="images/screenshots/AllureTestOpsManualTest.png">
-</p>
-
 ### Пример запуска тест-кейсов
 <p align="center">
 <img src="images/screenshots/AllureTestOpsLaunches.png">
-</p>
-
-<a id="jira"></a>
-## Интеграция с Jira 
-<p align="center">
-<img src="images/screenshots/Jira.png">
 </p>
 
 <a id="telegram"></a>
@@ -145,12 +118,4 @@ ${TASK}
 
 <p>
 <img src="images/screenshots/TelegramBot.png">
-</p>
-
-<a id="video"></a>
-## Пример прогона теста в Selenoid
-
-> К каждому тесту в отчете прилагается видео
-<p align="center">
-  <img src="images/video/Video.gif">
 </p>
