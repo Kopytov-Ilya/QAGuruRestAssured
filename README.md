@@ -118,5 +118,5 @@ tests_groovy
 ## Уведомления в Telegram с использованием бота
 
 <p>
-<img src="images/screenshots/TelegramBot.png">
+<img src="images/screenshots/TelegramBotApi.png">
 </p>
