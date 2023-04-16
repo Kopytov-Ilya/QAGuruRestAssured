@@ -86,7 +86,8 @@ tests_groovy
 </p>
 
 <a id="allure"></a>
-## Отчеты в Allure
+## :bookmark: </a> Добавление интеграции с Jenkins 
+<a target="_blank" href="https://jenkins.autotests.cloud/job/017-Kopytov_Ilya-restAssured/"> job </a> 
 
 ### Основное окно
 
@@ -100,8 +101,8 @@ tests_groovy
 <img src="images/screenshots/AllureBehaviors.png">
 </p>
 
-<a id="testops"></a>
-## Интеграция с Allure TestOps 
+## :bookmark: </a> Добавление интеграции с Allure TestOps
+<a target="_blank" href="https://allure.autotests.cloud/project/2183/dashboards">Dashboard</a>
 
 ### Тест-кейсы
 <p align="center">
